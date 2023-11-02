@@ -21,15 +21,37 @@ Both scripts maintain a detailed log of every command executed and the correspon
 
 ## Getting Started
 
-To leverage Cloud City, you'll need to have a Digital Ocean account and your SSH key ID readily available. Follow these simple steps to obtain your SSH key ID from Digital Ocean:
+To leverage Cloud City, you'll need to have a Digital Ocean account and your SSH key ID readily available. Before compiling the code, ensure you replace the placeholder in the source code with your actual SSH key ID obtained from Digital Ocean.
+
+### SSH Key Passphrase
+
+If your RSA key has a passphrase, you will need to use `ssh-add` to add your SSH private key to the list of known keys to allow Cloud City to use it without prompting for a passphrase each time.
+
+Run the following command:
+
+```bash
+ssh-add /path/to/your/private/key
+```
+
+*Note: If you have not used `ssh-add` before, you may need to start the SSH agent first with `eval $(ssh-agent)`.*
+
+### Digital Ocean Access Token
+
+Set your Digital Ocean access token as an environment variable:
+
+```bash
+export DIGITALOCEAN_ACCESS_TOKEN='your_access_token_here'
+```
+
+*Replace `your_access_token_here` with your actual Digital Ocean personal access token.*
+
+Follow these simple steps to obtain your SSH key ID from Digital Ocean:
 
 ```bash
 curl -X GET -H "Content-Type: application/json" \
-    -H "Authorization: Bearer [Your_Digital_Ocean_Personal_Access_Token]" \
+    -H "Authorization: Bearer $DIGITALOCEAN_ACCESS_TOKEN" \
     "https://api.digitalocean.com/v2/account/keys"
 ```
-
-*Note: Replace `[Your_Digital_Ocean_Personal_Access_Token]` with your actual Digital Ocean personal access token.*
 
 ## Prerequisites
 
@@ -51,11 +73,17 @@ Navigate to the Cloud City directory:
 cd cloud-city
 ```
 
-Run the setup script (if available) or follow the installation instructions provided within the repository.
+Before compiling the tool, open the configuration file or source code and replace the placeholder for the SSH key ID with the one you obtained from your Digital Ocean account.
+
+Compile the tool with the following command:
+
+```bash
+go build -o cloud-city
+```
 
 ## Usage
 
-Instructions on how to deploy droplets, initiate tunnels, and utilize `lobot` and `bobafett` will be provided in detail within the repository's usage section.
+Instructions on how to deploy droplets, initiate tunnels, and utilize `lobot` and `bobafett` will be provided in detail within the repository's usage section after compilation.
 
 ## Contributing
 
@@ -73,8 +101,4 @@ This project is licensed under the MIT License - see the `LICENSE.md` file for d
 
 - Hat tip to Tom for the original cloud proxy concept.
 - Gratitude to the Digital Ocean community for their excellent API and resources.
-
----
-
-*This README is a starting point for Cloud City's documentation. Further details and expansions will be made to ensure full coverage and clear instructions for all users.*
 
