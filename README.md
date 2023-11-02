@@ -23,11 +23,11 @@ Both scripts maintain a detailed log of every command executed and the correspon
 
 To leverage Cloud City, you'll need to have a Digital Ocean account and your SSH key ID readily available. Follow these simple steps to obtain your SSH key ID from Digital Ocean:
 
-\```bash
+```bash
 curl -X GET -H "Content-Type: application/json" \
     -H "Authorization: Bearer [Your_Digital_Ocean_Personal_Access_Token]" \
     "https://api.digitalocean.com/v2/account/keys"
-\```
+```
 
 *Note: Replace `[Your_Digital_Ocean_Personal_Access_Token]` with your actual Digital Ocean personal access token.*
 
@@ -41,15 +41,15 @@ curl -X GET -H "Content-Type: application/json" \
 
 Clone the repository to your local machine:
 
-\```bash
+```bash
 git clone [Repository-URL]
-\```
+```
 
 Navigate to the Cloud City directory:
 
-\```bash
+```bash
 cd cloud-city
-\```
+```
 
 Run the setup script (if available) or follow the installation instructions provided within the repository.
 
