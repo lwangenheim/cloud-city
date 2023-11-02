@@ -64,7 +64,7 @@ curl -X GET -H "Content-Type: application/json" \
 Clone the repository to your local machine:
 
 ```bash
-git clone [Repository-URL]
+git clone https://github.com/lwangenheim/cloud-city
 ```
 
 Navigate to the Cloud City directory:
@@ -91,7 +91,7 @@ If you would like to contribute to the development of Cloud City, please read `C
 
 ## Authors
 
-* **Lee** - *Initial work* - Inspired by the original cloud proxy tool by Tom.
+* **Lee** - *Initial work* - Inspired by the original cloud proxy tool by Tom Steel https://github.com/tomsteele/cloud-proxy.
 
 ## License
 
@@ -101,4 +101,5 @@ This project is licensed under the MIT License - see the `LICENSE.md` file for d
 
 - Hat tip to Tom for the original cloud proxy concept.
 - Gratitude to the Digital Ocean community for their excellent API and resources.
+- Gratitude to ChatGPT that definitely didn't write this README.md file.
 
