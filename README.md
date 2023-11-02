@@ -94,7 +94,7 @@ If you would like to contribute to the development of Cloud City, please read `C
 
 ## Authors
 
-* **Lee** - *Initial work* - Inspired by the original cloud proxy tool by Tom Steel https://github.com/tomsteele/cloud-proxy.
+* **Hxfifty** - *Initial work* - Inspired by the original cloud proxy tool by Tom Steel https://github.com/tomsteele/cloud-proxy.
 
 ## License
 
