@@ -7,11 +7,11 @@ Welcome to Cloud City, an advanced proxy management tool designed to streamline 
 - **Dynamic Cloud Proxy**: Quickly creates and manages a series of Digital Ocean droplets to be used as SSH tunnel proxies.
 - **Automatic CSV Generation**: Generates a CSV file listing all IP addresses used, facilitating easy log checking for clients.
 - **Graceful Teardown**: Upon receiving a CTRL+C command, Cloud City will automatically destroy the droplets, terminate the SSH tunnels, and clean up your `known_hosts` to prevent future SSH conflicts.
-- **Companion Scripts**: Two utility scripts, `lobot` and `bobafett`, enhance the functionality of Cloud City by providing specific proxy services for different use cases.
+- **Companion Scripts**: Two utility scripts, `Firespray` and `bobafett`, enhance the functionality of Cloud City by providing specific proxy services for different use cases.
 
-### Lobot
+### Firespray
 
-Lobot integrates seamlessly with `nmap`, providing you with a fresh, random IP address from your Digital Ocean droplets for each scan initiated, ensuring varied scan sources and improved test reliability.
+Firespray integrates seamlessly with `nmap`, providing you with a fresh, random IP address from your Digital Ocean droplets for each scan initiated, ensuring varied scan sources and improved test reliability.
 
 ### Bobafett
 
