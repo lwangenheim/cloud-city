@@ -248,6 +248,7 @@ func handleInterrupts(client *godo.Client, droplets []*DropletInfo) {
     }()
 }
 
+
 // cleanup will handle destroying the droplets and closing SSH tunnels.
 func cleanup(client *godo.Client, droplets []*DropletInfo) {
     for _, droplet := range droplets {
@@ -264,12 +265,26 @@ func cleanup(client *godo.Client, droplets []*DropletInfo) {
             fmt.Fprintf(os.Stderr, "Error destroying droplet ID %d: %s\n", droplet.ID, err)
         } else {
             fmt.Printf("Destroyed droplet ID %d.\n", droplet.ID)
+            // Remove the droplet's SSH key from known_hosts
+            removeSSHKeyFromKnownHosts(droplet.IP)
         }
+    }
+}
+
+// removeSSHKeyFromKnownHosts uses ssh-keygen to remove an SSH key from known_hosts file.
+func removeSSHKeyFromKnownHosts(ip string) {
+    cmd := exec.Command("ssh-keygen", "-R", ip)
+    err := cmd.Run()
+    if err != nil {
+        log.Printf("Error removing SSH key for %s from known_hosts: %s\n", ip, err)
+    } else {
+        fmt.Printf("Removed SSH key for %s from known_hosts.\n", ip)
     }
 }
 
 
 
+// This is the main function, the main function stuff goes here
 func main() {
     token := getTokenFromEnv()
     oauthClient := oauth2.NewClient(context.Background(), oauth2.StaticTokenSource(&oauth2.Token{
@@ -314,4 +329,3 @@ func main() {
     // Wait indefinitely until an interrupt (Ctrl+C) is received.
     select {}
 }
-
