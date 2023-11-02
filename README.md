@@ -1,6 +1,6 @@
 # Cloud City
 
-Welcome to Cloud City, an advanced proxy management tool designed to streamline and automate the process of utilizing cloud resources for security testing. Cloud City is inspired by the classic cloud proxy tool by Tom, reimagined and revamped to meet modern cybersecurity challenges. This utility is tailored for professionals who need to conduct rigorous testing against firewalls and ensure that security operations centers (SOCs) can detect their activity.
+Welcome to Cloud City, an advanced proxy management tool designed to streamline and automate the process of utilizing cloud resources for security testing. Cloud City is inspired by the classic cloud proxy tool by Tom Steele, reimagined and revamped to meet modern cybersecurity challenges. This utility is tailored for professionals who need to conduct rigorous testing against firewalls and ensure that security operations centers (SOCs) can detect their activity.
 
 ## Features
 
