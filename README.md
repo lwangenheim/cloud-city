@@ -83,7 +83,10 @@ go build -o cloud-city
 
 ## Usage
 
-Instructions on how to deploy droplets, initiate tunnels, and utilize `lobot` and `bobafett` will be provided in detail within the repository's usage section after compilation.
+```bash
+./cloud-city
+```
+This will start up the proxies and create the tunnels, once those are complete you'll be able to use them. To gracefully shutdown the droplets and close the ssh connections you can type ```ctrl+c``` and it will take care of it. Additionally it will remove the droplets from your known_hosts.
 
 ## Contributing
 
@@ -99,7 +102,7 @@ This project is licensed under the MIT License - see the `LICENSE.md` file for d
 
 ## Acknowledgments
 
-- Hat tip to Tom for the original cloud proxy concept.
+- Hat tip to Tom Steele for the original cloud proxy concept.
 - Gratitude to the Digital Ocean community for their excellent API and resources.
 - Gratitude to ChatGPT that definitely didn't write this README.md file.
 
