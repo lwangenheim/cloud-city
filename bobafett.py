@@ -4,6 +4,23 @@ import subprocess
 import datetime
 import shlex
 
+#Rquired ASCII Art
+
+print("""
+
+⢀⣀⣀⡀⠀⠀⢀⣀⣀⣀⡀⠀⠀⠀⠀⠀
+⠈⢹⠉⢁⣴⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀
+⠀⢸⠀⣾⣿⣿⣿⣿⣿⣿⣷⣶⣿⣿⡀⠀
+⠀⣾⢀⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⡀⠀
+⠀⣿⣤⣀⠈⠉⠉⢻⣿⡟⠉⠉⠉⣀⣤⠀
+⠀⠀⣿⣿⣷⣄⠀⢸⣿⡇⠀⢠⣾⣿⣿⡀
+⠀⢰⣿⣿⣿⣿⡆⢸⣿⡇⢠⣿⣿⣿⣿⡇
+⠀⠈⠙⠻⢿⣿⣿⢸⣿⡇⣸⣿⡿⠟⠋⠁
+⠀⠀⠀⠀⠀⠈⠉⠈⠉⠁⠉⠁⠀⠀⠀⠀
+Welcome to Boba Fett
+""")
+
+
 # Function to get external IP
 def get_external_ip(local_port):
     curl_command = f"curl -s -x socks5h://localhost:{local_port} https://ipinfo.io/ip"
