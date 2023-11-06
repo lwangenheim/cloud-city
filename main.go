@@ -316,8 +316,7 @@ func main() {
     }
     wg.Wait()
 
-
-        // Set up the interrupt handler here, after all droplets have been created.
+    // Set up the interrupt handler here, after all droplets have been created.
     handleInterrupts(client, droplets)
 
     // Output the details of the droplets and SSH tunnels
